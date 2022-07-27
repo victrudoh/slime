@@ -2,12 +2,6 @@
 
 <h2>Register</h2>
 <p class="lead text-center">Join our community</p>
-<?php
-if (!empty($_SESSION['message'])) {
-    echo $_SESSION['message'];
-    $_SESSION['message'] = '';
-}
-?>
 
 <div class="alert alert-danger" role="alert" id="error" style="display: none;">...</div>
 

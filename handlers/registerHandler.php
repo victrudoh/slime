@@ -52,7 +52,6 @@ if (isset($_POST["username"])) {
 
                     if ($conn->query($sql) === TRUE) {
                         // on success, redirect
-                        // header('Location: login.php');
                         $data = [
                             "message" => "Login successful",
                             "status" => 200
@@ -63,8 +62,6 @@ if (isset($_POST["username"])) {
                             "message" => "Couldn't create user",
                             "status" => 400
                         ];
-                        // echo '<script>alert("error")</script>';
-                        // echo "Error: ${mysqli_error($conn)}";
                     }
                 } else {
                     $data = [

@@ -20,7 +20,7 @@ switch ($requestedpage) {
         include 'login.php';
         break;
     case '/slime/add':
-        include 'addpost.php';
+        include 'newpost.php';
         break;
     case '/slime/about':
         include 'about.php';

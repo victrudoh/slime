@@ -3,9 +3,9 @@
 // session_start();
 
 if (isset($_SESSION['username'])) {
-    include 'feed.php';
-    // header("Location: feed.php");
+    // include 'feed.php';
+    header("Location: feed");
 } else {
-    include 'register.php';
-    // header("Location: register.php");
+    // include 'register.php';
+    header("Location: register");
 }

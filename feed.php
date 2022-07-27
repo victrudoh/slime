@@ -4,6 +4,10 @@
 $sql = 'SELECT * FROM post';
 $result = mysqli_query($conn, $sql);
 $post = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// $path = $_SERVER['DOCUMENT_ROOT'] . "/slime/uploads/1621_halo2.jpg";
+// unlink($path);
+// echo $path;
 ?>
 
 <h2>News Feed</h2>
@@ -33,8 +37,9 @@ $post = mysqli_fetch_all($result, MYSQLI_ASSOC);
       </div>
       <hr>
       <div>
-        <form action="./deleteHandler.php" method="POST">
+        <form action="handlers/deleteHandler.php" method="POST">
           <input type="hidden" name="id" value="<?php echo $item['id'] ?>">
+          <input type="hidden" name="image" value="<?php echo $item['image'] ?>">
           <input type="submit" name="delete" value="Delete Post" class="btn btn-danger">
         </form>
       </div>
