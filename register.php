@@ -67,7 +67,7 @@
                 data: form.serialize(),
                 success: function(data) {
                     if (data.status == 200) {
-                        window.location = "http://localhost/slim/login.php"
+                        window.location = "http://localhost/slime/login"
                     } else {
                         $("#error").fadeIn(500, function() {
                             $("#error").html(data.message).show();
